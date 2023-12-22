@@ -1,0 +1,20 @@
+[
+	    {
+	    "userId": "101",
+	    "username": "Raja",
+	    "email": "rajar@cateina.com",
+	    "password": "raja123"
+	    },
+	    {
+	    "userId": "102",
+	    "username": "Siddhesh",
+	    "email": "siddheshp@cateina.com",
+	    "password": "siddhesh123"
+	    },
+    	{
+	    "userId": "101",
+	    "username": "Abhishek",
+	    "email": "abhisheks@cateina.com",
+	    "password": "abhishek123"
+	    }
+]

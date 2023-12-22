@@ -1,0 +1,17 @@
+[
+  {
+  	"advisorId": 1,
+    "advisorName": "AdvisorName1",
+    "advisorProfileURL": "files/profilepic/advisorName1"    
+  },
+  {
+  	"advisorId": 2,
+    "advisorName": "AdvisorName2",
+    "advisorProfileURL": "files/profilepic/advisorName2"    
+  },
+  {
+  	"advisorId": 3,
+    "advisorName": "AdvisorName3",
+    "advisorProfileURL": "files/profilepic/advisorName3"    
+  }
+ ]
