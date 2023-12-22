@@ -59,11 +59,11 @@ public class UseradvisormanagementApplication implements CommandLineRunner{
 		long numOfUsers = userService.total();
 		System.out.println("Total number of Advisors="+numOfAdvisors);
 
-		System.out.println("Total number of Bookings="+numOfUsers);
+		System.out.println("Total number of Users="+numOfUsers);
 		
-		bookingService.loadDefaultBookings(importBookingfile);
-		long numOfBookings = bookingService.total();
-		System.out.println("Total number of Bookings="+numOfBookings);		
+		//bookingService.loadDefaultBookings(importBookingfile);
+		//long numOfBookings = bookingService.total();
+		//System.out.println("Total number of Bookings="+numOfBookings);		
 	}
 	/*
 	private void createTourPackages() {

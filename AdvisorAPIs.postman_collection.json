@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "e285f9c6-da0e-4aca-b4f3-a33027d0d709",
+		"name": "AdvisorAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "8639670",
+		"_collection_link": "https://gold-shuttle-949167.postman.co/workspace/bc931a28-7b15-4ddf-9425-7db11f2b0283/collection/8639670-e285f9c6-da0e-4aca-b4f3-a33027d0d709?action=share&source=collection_link&creator=8639670"
+	},
+	"item": [
+		{
+			"name": "Create Advisors",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"advisorName\": \"lmn\",\r\n    \"advisorProfileURL\": \"files//profilepic//lmn\"\r\n        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/admin/advisors"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/user/register"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAdvisorById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/admin/advisors/2"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllAdvisors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/admin/advisors"
+			},
+			"response": []
+		},
+		{
+			"name": "RegisterUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\t    \"username\": \"Ramesh\",\r\n\t    \"email\": \"rameshr@xyz.com\",\r\n\t    \"password\": \"ramesh123\"\r\n\t    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/register"
+			},
+			"response": []
+		}
+	]
+}

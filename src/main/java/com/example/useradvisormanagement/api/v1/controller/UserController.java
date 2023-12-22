@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -29,8 +29,8 @@ import com.example.useradvisormanagement.repository.AdvisorRepository;
 import com.example.useradvisormanagement.repository.UserRepository;
 import com.example.useradvisormanagement.service.UserService;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
+//import io.jsonwebtoken.Jwts;
+//import io.jsonwebtoken.security.Keys;
 
 @RestController
 @RequestMapping("/user/register")
@@ -51,21 +51,20 @@ public class UserController {
     }
     
 
-    public static String generateToken(UserDetails userDetails) {
-        return Jwts.builder()
-                .setSubject(userDetails.getUsername())
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))
-                .signWith(Keys.hmacShaKeyFor(SECRET_KEY.getBytes()))
-                .compact();
-    }
+	/*
+	 * public static String generateToken(UserDetails userDetails) { return
+	 * Jwts.builder() .setSubject(userDetails.getUsername()) .setIssuedAt(new
+	 * Date()) .setExpiration(new Date(System.currentTimeMillis() +
+	 * EXPIRATION_TIME)) .signWith(Keys.hmacShaKeyFor(SECRET_KEY.getBytes()))
+	 * .compact(); }
+	 */
     // POST endpoint to create a new user    
-    
+    @PostMapping
     public ResponseEntity<UserAdvise> createUser(@RequestBody UserAdvise user) {
           UserAdvise userObj = (UserAdvise) userRepo.save(user);
           System.out.println("User created successfully"+ userObj.toString());
           if(userObj!=null && !userObj.getUsername().isEmpty())
-        	  	return (ResponseEntity<UserAdvise>) ResponseEntity.ok();
+        	  	return  ResponseEntity.ok(userObj);
           else
         	   return (ResponseEntity<UserAdvise>) ResponseEntity.badRequest();
     }
