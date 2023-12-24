@@ -31,19 +31,20 @@ public class AdvisorController {
     // GET endpoint to fetch all advisors
     @GetMapping
     public List<Advisor> getAllAdvisors() {
+    	System.out.println("Inside AdvisorController::getAllAdvisors");
         return advisorRepository.findAll();
     }
 
     // POST endpoint to create a new advisor
     @PostMapping
     public ResponseEntity<Advisor> createAdvisor(@RequestBody Advisor advisor) {
-    	System.out.println("Inside createAdvisor"+ advisor.toString());
-          Advisor advisorObj = (Advisor) advisorRepository.save(advisor);
-          System.out.println("Advisor created successfully"+ advisorObj.toString());
-          if(advisorObj!=null && !advisorObj.getAdvisorName().isEmpty())
-        	  	return  ResponseEntity.ok(advisorObj);
-          else
-        	   return ResponseEntity.badRequest().build();
+    	System.out.println("Inside AdvisorController::createAdvisor::"+ advisor.toString());
+        Advisor advisorObj = (Advisor) advisorRepository.save(advisor);
+        System.out.println("Advisor created successfully::"+ advisorObj.toString());
+        if(advisorObj!=null && !advisorObj.getAdvisorName().isEmpty())
+        	 return  ResponseEntity.ok(advisorObj);
+        else
+        	 return ResponseEntity.badRequest().build();
     }
 
     // GET endpoint to fetch a specific advisor by ID
